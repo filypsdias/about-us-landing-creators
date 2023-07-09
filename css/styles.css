@@ -1412,6 +1412,18 @@ a:hover {
 }
 /* end of form success and error message formatting */
 
+.black-white {
+	filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+.black-white:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+	transition: filter 0.5s ease; /* Adjust the duration as needed */
+    -webkit-transition: filter 0.5s ease; /* For Safari/Chrome */
+}
+
 /* Min-width 1200px */
 @media (min-width: 1200px) {
 	
