@@ -140,17 +140,19 @@ function topFunction() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-	var textarea = document.getElementById('cmessage');
-	var textEmail = document.getElementById('cemail');
-	var userName = document.getElementById('cname');
+    var textarea = document.getElementById('cmessage');
+    var textEmail = document.getElementById('cemail');
+    var userName = document.getElementById('cname');
 
-	var link = document.getElementById('whatsapp-link');
-  
-	textarea.addEventListener('input', function () {
-	  var fullText = 'Olá! Me chamo ' + userName.value + ', e meu email é ' + textEmail.value + '. Gostaria de solicitar um orçamento para uma Landing Page e acelerar meu negócio! Detalhes do que eu quero são:' + textarea.value;
-	  var textareaValue = encodeURIComponent(fullText);
-	  console.log(fullText)
-	  var linkURL = 'https://wa.me/5561983131691/?text=' + textareaValue;
-	  link.href = linkURL;
-	});
-  });
+    var submitButton = document.getElementById('submit-button');
+
+    submitButton.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        var fullText = 'Olá! Me chamo ' + userName.value + ', e meu email é ' + textEmail.value + '. Gostaria de solicitar um orçamento para uma Landing Page e acelerar meu negócio! Detalhes do que eu quero são:' + textarea.value;
+        var textareaValue = encodeURIComponent(fullText);
+        var linkURL = 'https://wa.me/5561983131691/?text=' + textareaValue;
+
+        window.open(linkURL, '_blank');
+    });
+});
