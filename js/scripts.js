@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         var fullText = 'Olá! Me chamo ' + userName.value + ', e meu email é ' + textEmail.value + '. Gostaria de solicitar um orçamento para uma Landing Page e acelerar meu negócio! Detalhes do que eu quero são:' + textarea.value;
         var textareaValue = encodeURIComponent(fullText);
-        var linkURL = 'https://wa.me/5561983131691/?text=' + textareaValue;
+        var linkURL = 'https://wa.me/5561984438069/?text=' + textareaValue;
 
         window.open(linkURL, '_blank');
     });
